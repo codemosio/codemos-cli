@@ -1,0 +1,32 @@
+{
+  "name": "@codemos/cli",
+  "version": "1.0.0",
+  "description": "Command line tools for codemos course system",
+  "bin": {
+    "codemos": "./src/codemos.js"
+  },
+  "keywords": [
+    "codemos",
+    "cli",
+    "lms",
+    "course",
+    "markdown",
+    "education",
+    "scaffolding",
+    "boilerplate",
+    "generator",
+    "learning",
+    "elearning"
+  ],
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Codemos Authors",
+  "license": "MIT",
+  "dependencies": {
+    "@codemosio/templates": "0.0.1",
+    "inquirer": "^8.2.6",
+    "yargs": "^17.7.2"
+  }
+}
