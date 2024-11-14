@@ -1,6 +1,6 @@
 {
-  "name": "@codemos/cli",
-  "version": "1.0.0",
+  "name": "@codemosio/cli",
+  "version": "0.0.1",
   "description": "Command line tools for codemos course system",
   "bin": {
     "codemos": "./src/codemos.js"
@@ -18,12 +18,12 @@
     "learning",
     "elearning"
   ],
+  "author": "Codemos Authors",
+  "license": "MIT",
   "preferGlobal": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Codemos Authors",
-  "license": "MIT",
   "dependencies": {
     "@codemosio/templates": "0.0.1",
     "inquirer": "^8.2.6",

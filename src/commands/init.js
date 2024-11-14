@@ -71,11 +71,13 @@ async function initCodemos(targetPath) {
   }
 
   // Generate the config.js file
-  const configFilePath = path.join('./codemos.json');
+  const configFilePath = path.join('./codemos.config.json');
+  // TODO: put in a separate file (config-template) or create a type courseConfig to serialize directly (better)  ? 
   const configContent = `{
   "title": "${courseTitle}",
   "description": "${courseDescription}",
-  "srcDir": "${courseContentLocation}"
+  "srcDir": "${courseContentLocation}",
+  "links": [] 
 }`;
 
   fs.writeFileSync(configFilePath, configContent);

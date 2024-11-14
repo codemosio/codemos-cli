@@ -25,7 +25,7 @@ async function removeCodemos() {
   console.info('Removing codemos content...')
 
   // Read the config.js file
-  const configFilePath = path.join('./codemos.json');
+  const configFilePath = path.join('./codemos.config.json');
   if (!fs.existsSync(configFilePath)) {
     console.error(`Course config file not found. Aborting...`); // aborting function ? error, reason (msg)
   }
@@ -45,6 +45,9 @@ async function removeCodemos() {
   // remove files (TODO: keep all deletetions here or one try/catch per file ?)
   try {
     fs.rmSync(configData.srcDir, { recursive: true, force: true })
+    if (fs.existsSync('./.codemos')) {
+      fs.rmSync('./.codemos')
+    }
     fs.rmSync(configFilePath)
   } catch(error) {
     console.error('Fail to delete files. Aborting...', error); // aborting function ? error, reason (msg), display error?
